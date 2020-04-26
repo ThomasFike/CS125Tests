@@ -1,0 +1,12 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require hw02.c
+  checks:
+    file exists:
+      - run: ls | grep hw02.c
+        stdout: hw02.c
+        exit: 0
+    compiles:
+      - run: gcc -o hw02 hw02.c
+        exit: 0
