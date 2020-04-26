@@ -22,3 +22,7 @@ check50:
           0 of the integers were negative.
           The sum of the 2 integers was 3.
         exit: 0
+    test set 2:
+      - run: ./a.out
+        stdin: q
+        exit: 0
