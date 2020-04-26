@@ -8,5 +8,17 @@ check50:
         stdout: hw02.c
         exit: 0
     compiles:
-      - run: gcc -o hw02 hw02.c
+      - run: gcc hw02.c
+        exit: 0
+    test set 1:
+      - run: gcc hw02.c; ./a.out
+        stdin: |
+          1
+          2
+          q
+        stdout: |
+          You entered 2 integers.
+          2 of the integers were positive.
+          0 of the integers were negative.
+          The sum of the 2 integers was 3.
         exit: 0
