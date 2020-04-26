@@ -1,6 +1,10 @@
 check50:
   checks:
-    hello world:
+    file exists:
+      - run: ls | grep hello.py
+        stdout: hello.py
+        exit: 0
+    testing hello:
       - run: python3 hello.py
         stdout: Hello, world!
         exit: 0
